@@ -1,0 +1,115 @@
+/* ==|=======================================================================
+   Module/left Tabs - Based on jQuery UI
+   ========================================================================== */
+
+.m-left-tabs {
+	.tabs-menu {
+		float: left;
+		width: 9em;
+		padding: 0;
+		margin: .5em 0 0;
+		list-style: none;
+		
+		a {
+			display: block;
+			font: 300 1.125em/1.5 $oswald;
+			color: #a1a1a1;
+			border-top: 1px solid #ddd;
+			padding: 7px 1em 6px .2em;
+			margin-left: 1em;	
+			padding: 7px 1em 6px .2em;	
+			outline: none;
+			@include transition(none);
+									
+			&:hover {
+				color: #777;
+			}			
+		}
+		li.active {
+			a {
+				background: $color2;
+				color: #fff;
+				margin: 0;				
+				position: relative;
+				@include gradient-linear(#cb3b4e,#c53546);
+				border: 1px solid #c02c3e;
+				@include border-radius(2px 0 0 2px);
+				position: relative;
+				top: 1px;				
+				padding-left: 1.15em;				
+				&:after {
+					background: $sprite-default -33px -23px;
+					width: 31px;
+					height: 53px;
+					position: absolute;
+					right: -31px;
+					content: " ";
+					top: -4px;
+					
+				}
+			}
+		}
+		li:first-child {
+			a {
+				border-top: none;					
+			}
+		}
+		
+	}
+	.tabs-content {
+		margin-left: 9.5em;
+		padding: 2em;
+		background-color: #fff;
+		@include box-shadow-ie(0, 1px, 3px, rgba(#000, .12), #ddd);
+		@include border-radius(2px);
+		border: none;
+		*border: solid 1px #ddd;
+	}
+	
+	/* Small screens */
+	@media (max-width: 32em) {
+		.tabs-menu {
+			float: none;
+			width: auto;
+			padding-right: 2em;
+			margin-bottom: 1em;
+		}
+		.tabs-content {
+			margin-left: 0;
+		}
+	}	
+}
+
+/* Arabe version */
+.rtl .m-left-tabs {
+	text-align: right;
+
+	.tabs-menu {
+		float: right;
+
+		li.active {
+			a {
+				@include border-radius(0 2px 2px 0);			
+				padding-right: 1.15em;				
+				padding-left: 0;
+
+				&:after {
+					left: -31px;
+					top: -9px;
+					@include rotate(180deg);
+				}
+			}
+		}
+	}
+	.tabs-content {
+		margin: 0 9em 0 0;
+	}
+	.m-text ul {
+		margin: 0 40px 0 0;
+
+		li {
+			background-position: right 3px;
+			padding: 0 2em 0 0;
+		}
+	}
+}

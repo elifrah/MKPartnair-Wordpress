@@ -1,0 +1,29 @@
+/* ==|=======================================================================
+   Base/Site Settings
+   ========================================================================== */
+
+/* Fonts */
+$font1: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font2: $oswald;
+$font3: Georgia, serif;
+$font-size: 1em;
+$line-height: 1.5;
+
+/* Colors */
+$blue: #172983;
+$red: #c22236;
+$grey: #5e5e5e; /* Grey */
+$facebook: #3b5998;
+$twitter: #43bfe1;
+
+$color1: $blue;
+$color2: $red;
+
+$link-color: $color2;
+
+/* Wrapper */
+$wrapper-width: 71.25em;
+
+/* Sprite */
+$sprite-default: url(../img/sprite.png);
+$sprite-default-retina: url(../img/sprite-retina.png);

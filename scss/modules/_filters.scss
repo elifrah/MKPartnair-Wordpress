@@ -1,0 +1,48 @@
+/* ==|=======================================================================
+   Module/Filters
+   ========================================================================== */
+   
+.m-filters {
+	text-align: center;
+	
+	.filters-col {
+		@include d-inline-block();
+		margin: 0 .8em;
+		text-align: left;
+	}
+	label {
+		color: #717171;
+	}
+	.label {
+		vertical-align: 3px;
+		color: $color1;
+		font-weight: bold;
+		font-size: .9em;
+	}
+	.filters-checkbox {
+		cursor: pointer;	
+	}
+	.filters-jet {
+		.label {
+			color: lighten($color1, 10%);
+		}
+		&:hover {
+			.label {
+				color: $color1;
+			}
+		}
+	}
+	.filters-airliner {
+		.label {
+			color: lighten($color2, 10%);
+		}		
+		.icon {
+			vertical-align: -4px;
+		}
+		&:hover {
+			.label {
+				color: $color2;
+			}
+		}
+	}
+} /* .m-filters */

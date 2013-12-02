@@ -1,0 +1,90 @@
+/* ==|=======================================================================
+   Layout/Tabs Page
+   ========================================================================== */
+
+.l-tabs-page {		
+	.tabs-page-intro {
+		margin: 2em 0;
+		font-size: .95em;
+		
+		p {
+			margin: 0;
+		}
+	}
+	.tabs-page-intro-top {
+		font-size: 1.0625em; /* 17/16 */
+		font-weight: 400;
+	}
+	.tabs-page-intro-bottom {
+		color: #6c6c6c;
+		font-size: .9375em; /* 15/16 */
+	}
+	.m-left-tabs {
+		margin: 1em 0 3em;
+	}
+	.m-left-tabs .tabs-content {
+		@extend .clearfix;
+		font-size: .95em;
+		
+		ul {
+			padding: 0;
+			margin: 0;
+			
+			li {
+				margin-right: 6%;
+				width: 42%;
+				*width: 40%; /* IE7 Hack */
+				@include d-inline-block();
+				margin-bottom: 1em;
+				@include box-sizing(border-box);
+				vertical-align: top;
+				min-height: 1.5em;
+			}
+		}	
+	}	
+}
+
+/* Adaptations page Why choose MK Partnair */
+.page-id-43 {
+	.m-left-tabs {
+		.tabs-menu {
+			width: 18em;
+		}
+		.tabs-content {
+			margin-left: 19em;
+		}
+	}
+
+	/* Arabic version */
+	&.rtl {
+		.m-left-tabs .tabs-content {
+			margin-left: 0;
+			margin-right: 18em;
+		}
+	}
+}
+
+
+/* ==|=======================================================================
+   Responsive/Small Screens
+   ========================================================================== */
+
+@media (max-width: 47em) {
+	.l-tabs-page {		
+		.m-left-tabs .tabs-content {
+			li {
+				margin-right: 0;
+				width: 100% !important;	
+			}
+		}
+	}
+}
+
+/* Arabic version */
+.rtl .l-tabs-page {
+	.tabs-page-intro,
+	.m-left-tabs .tabs-content {
+		text-align: right;
+		font-size: 1em;
+	}
+}

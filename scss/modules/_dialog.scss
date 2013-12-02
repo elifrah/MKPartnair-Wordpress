@@ -1,0 +1,170 @@
+/* ==|=======================================================================
+   Module/Dialog
+   ========================================================================== */
+   
+.m-dialog-overlay {	
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 20;
+}
+.m-dialog-wrapper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: scroll;
+	z-index: 100000;
+	background-image: url('../img/white-90.png');
+}
+
+.m-dialog {	
+	margin: 3em 0;
+
+	.dialog-inner {
+		z-index: 1000000;
+		background: url('../img/popin/pop-in-bg.png') no-repeat left top #f9f9f9;
+		position: relative;
+		text-align: left;
+		padding: 2em;
+		outline: none;
+		@include box-shadow(0, 1px, 3px, rgba(#000, .2));
+		@include border-radius(2px);
+		max-width: 48em;
+		margin: 2em auto;
+	}
+	
+	.btn-close {
+		position: absolute;
+		right: -6em;
+		top: 0;
+		width: 4em;
+		outline: none;
+	}	
+	.dialog-title {
+		text-align: right;
+		font-family: $oswald;
+		text-transform: uppercase;
+		color: $color2;
+		font-size: 2em;
+		margin: 0;
+		font-weight: 400;
+		min-height: 1em;
+	}
+	.dialog-btns {
+		text-align: right;
+		padding: 0;
+		margin: .3em 0 2em;
+		list-style: none;
+		
+		li {
+			@include d-inline-block();
+			margin-left: 1em;
+		}
+		a {
+			text-align: center;
+		}
+	}
+	.dialog-content {
+		background-color: #fff;
+		@include box-shadow(0, 1px, 2px, rgba(#000, .12));
+		padding: 1em;
+		
+		img {
+			width: 100%;
+		}
+		
+		.span4 img.first {
+			margin-bottom: .5em;
+		}
+		table {
+			width: 100%;			
+		}
+		td {
+			border-top: 1px dashed #eee;
+			padding: .5em;
+			font-size: .9em;
+			
+			&.label {
+				color: #999;
+				text-transform: uppercase;
+				border-right: 1px dashed #eee;
+			}
+		}
+	}
+	.dialog-subtitle {
+		margin: 0;
+		color: $color1;
+		text-transform: uppercase;
+		font: 300 1.5em/1.5 $oswald;
+		letter-spacing: 1px;
+	}
+	.dialog-coordinates {
+		position: absolute;
+		left: 5em;
+		top: 5em;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: .7em;
+		
+		a {
+			color: #fff;
+		}	
+	}	
+	.dialog-footer {
+		font-size: .9em;
+		text-align: center;
+		color: #999;
+		padding-top: 2em;
+		clear: both;
+	}
+	
+	/* Medium screens */
+	@media (max-width: 59em) {
+		margin: 3em 1em 2em;
+		
+		.btn-close {
+			right: 0;
+			top: -2em;
+		}		
+	}
+
+	/* Type color */
+	.airliner {
+		background-image: url('../img/popin/pop-in-bg-red.png');
+
+		.dialog-subtitle {
+			color: $color2;
+		}
+		.btn-close {
+			@include btn($color2);
+		}
+	}
+	
+} /* .ui-dialog */
+
+/* With white bg */
+.dialog-white {
+	.dialog-inner { 
+		background: #fff;
+	}
+	.dialog-title { 
+		text-align: left;
+	}
+	.dialog-content {
+		padding: 0;
+		@include box-shadow(0, 0, 0, #000);
+		*border: none;
+	}
+	.dialog-subtitle {
+		color: #999;
+		font-size: 1em;
+		margin-bottom: .5em;
+	}
+	.m-form .btn-wrap {
+		text-align: right;
+	}
+}

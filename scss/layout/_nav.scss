@@ -1,0 +1,250 @@
+/* ==|=======================================================================
+   Module/Nav
+   ========================================================================== */
+
+.l-primary-nav {
+	display: inline-block;
+	margin-top: 2em; /* 121/16 */
+	position: relative;
+	z-index: 10;
+	
+	> ul {
+		padding-left: 0;
+		margin: 0;
+		@include d-inline-block();			
+		
+		> li {
+			@include d-inline-block();
+			
+			&.circ {
+				font-size: .7em;
+				position: relative;
+				top: -0.4em;
+				/* <=IE7 Hacks */
+				*top: -2.25em;
+			}
+			
+			> a {
+				color: $color1;
+				font-family: $oswald;
+				font-weight: 300;
+				font-size: 1.1875em; /* 19/16 */
+				padding: .7em 1em;
+				display: block;
+				text-transform: uppercase;
+				border-bottom: solid 4px #fff;
+				position: relative;				
+				
+				&.hover, &:hover {
+					border-bottom-color: #eee;
+				}										
+			}
+			&.has-submenus {
+				> a.hover:after {
+					content: "";
+					position: absolute;
+					background: url('../img/sprite.png') no-repeat -198px -82px;
+					width: 36px;
+					height: 13px;
+					top: 2.4em;
+					left: 50%;
+					margin-left: -18px;
+					z-index: 20;
+				}
+				
+				&.current-menu-item > a {
+					&:after {
+						content: "";
+						position: absolute;
+						background: url('../img/sprite.png') no-repeat -198px -82px;
+						width: 36px;
+						height: 13px;
+						top: 2.4em;
+						left: 50%;
+						margin-left: -18px;
+						z-index: 20;
+					}
+				}
+			}
+			
+			&.current-menu-item {
+				> a {
+					border-bottom-color: $color1;
+				}
+				ul {
+					display: block;
+					z-index: 19;
+				}
+			}
+			
+			ul {
+				margin: 0;
+				display: none;
+				list-style: none;
+				position: absolute;
+				background-image: url('../img/submenu-bg.png');
+				@include box-shadow(0, 1px, 5px, rgba(#000, .2));
+				position: absolute;
+				width: 200%;
+				left: -50%;
+				z-index: 20;								
+			}	
+			li {
+				@include d-inline-block();
+				position: relative;	
+				
+				&:before {
+					content: "•";
+					position: absolute;
+					left: -0.5em;
+					top: 13px;
+					font-size: .2em;
+					color: #888;
+				}
+				&:first-child {
+					&:before {
+						content: "";
+					}
+				}
+				
+				a {
+					text-transform: uppercase;
+					color: #888;
+					padding: .6em 1em .5em;
+					display: block;
+					font: 300 .9em/1.5 $oswald;
+					border-bottom: solid 2px rgba(#fff, 0);
+					
+					&:hover {
+						color: #333;
+						border-color: #aaa;
+					}
+				}
+				&.current_page_item {
+					a {
+						color: #000;
+						border-color: #aaa;
+					}
+				}
+			}				
+		}
+	} /* ul */	
+	
+	select, label {
+		display: none;
+	}
+
+} /* .primary-nav */
+
+
+/* ==|=======================================================================
+   Responsive/Medium Screens
+   ========================================================================== */
+
+/* 1024x768 */
+@media (max-width: 66em) {
+	.l-primary-nav {
+		> ul > li > a {
+			padding-left: .8em;
+			padding-right: .8em;
+		}
+	}
+}
+@media (max-width: 62em) {
+	.l-primary-nav {
+		> ul > li > a {
+			padding-left: .5em;
+			padding-right: .5em;
+		}
+	}
+}
+/* iPad (768 x 1024) */
+@media (max-width: 57em) {
+	.l-primary-nav {
+		> ul > li > a {
+			padding-left: .3em;
+			padding-right: .3em;
+			font-size: 1em;
+		}
+	}
+}
+
+
+/* ==|=======================================================================
+   Responsive/Small Screens
+   ========================================================================== */
+   
+@media (max-width: 47em) {
+	.l-primary-nav {
+		float: left;
+		margin: 0;
+		
+		> ul {
+			display: none;
+		}
+		select {
+			display: block;
+			opacity: 0;
+			position: absolute;
+			top: 4px;
+			width: 4em;
+		}
+		label {
+			display: inline-block;	
+			color: $color1;
+			font: 300 1em/1.5 $oswald;
+			text-transform: uppercase;	
+			margin-top: 4px;
+			
+			.icon {
+				vertical-align: -2px;
+			}	
+		}
+	}
+}
+
+
+/* ==|=======================================================================
+   Responsive/Very Small Screens
+   ========================================================================== */
+   
+@media (max-width: 28em) {
+	.l-primary-nav {
+		label span {
+			display: none;	
+		}
+	}
+}
+
+/* Arabish version */
+.rtl .l-primary-nav {
+	> ul > li > a {
+		font-size: 1em;		
+	}
+	> ul > li li {
+		&:before {
+			display: none;
+			content: "";
+		}
+		&:after {
+			content: "•";
+			position: absolute;
+			right: -0.5em;
+			top: 2.4em;
+			font-size: .2em;
+			color: #888;
+		}
+		&:first-child {
+			&:after {
+				content: "";
+			}
+		}
+	}
+
+	@media (max-width: 57em) {
+		> ul > li a {
+			font-size: .9em;
+		} 
+	}
+}
+

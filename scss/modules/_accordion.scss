@@ -1,0 +1,44 @@
+/* ==|=======================================================================
+   Module/accordion
+   ========================================================================== */
+
+.m-accordion {
+	.accordion-header {
+		font-size: 1.25em;
+		font-family: $oswald;
+		border: solid #e8e8e8;
+		border-width: 1px 0;
+		padding: .5em 40px;
+		margin: -1px 0 0;
+		cursor: pointer;
+		line-height: 1;
+		min-height: 1.7em;
+
+		.icon {
+			float: left;
+		}
+		&:hover {
+			background-color: #fafafa;
+
+			.i-arrow-right {
+				background-position: -105px -93px;
+			}
+		}
+		&.is-open {
+			color: $color2;
+			border-bottom: none;
+		}
+	}
+	.accordion-title {
+		margin: 4px 0;
+		padding-left: 2.3em;
+		display: block;
+		line-height: 1.2;
+	}
+	
+	.accordion-content {
+		display: none;
+		padding: 0 40px;
+		font-size: .95em;
+	}
+}	

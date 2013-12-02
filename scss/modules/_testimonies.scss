@@ -1,0 +1,59 @@
+/* ==|=======================================================================
+   Module/Testimonies
+   ========================================================================== */
+
+.m-testimonies {	
+	padding: 3em 0;
+	position: relative;
+	height: 3.625em; /* 58/16 */
+	
+	[class^="slide"],
+	[class*=" slide"] {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 3em;
+		text-align: center;	
+		cursor: pointer;	
+	}
+	.blockquote {
+		color: #ababab;
+		font: 300 1.4375em/1.5 $oswald; /* 23/16 */
+		position: relative;
+		@include d-inline-block();
+		margin: 0;
+	}
+	.quote {
+		font: 300 3.30434783em/1.5 $oswald; /* 76/23 */
+		color: #e6e6e6;
+		position: absolute;
+		top: -.15em;
+	}
+	.quote-first {
+		@extend .quote;
+		left: -.4em;
+	}
+	.quote-last {
+		@extend .quote;
+		right: -.4em;
+	}
+	.who {
+		color: #6a6a6a;
+		font: 300 .8125em/1.5 $oswald; /* 13/16 */
+		text-transform: uppercase;
+	}
+	
+	/* Small screens */	   
+	@media (max-width: 47em) {
+		padding: 1em 2em;
+		height: auto;
+		font-size: .9em;
+		
+		[class^="slide"],
+		[class*=" slide"] {
+			position: static;
+		}
+	}
+}
+
+

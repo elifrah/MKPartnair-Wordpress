@@ -1,0 +1,66 @@
+/* ==|=======================================================================
+   Layout/Page
+   ========================================================================== */
+
+.l-page {
+	margin-bottom: 3em;
+	
+	.l-container {
+		margin-top: -.2em;
+		position: relative;
+		padding: 2em 2em 0;			
+	}
+	.container-inner {
+		background: url('../img/page-bg.png') repeat-y right top;
+		padding-bottom: 2em;
+		@extend .clearfix;
+	}
+	.page-content {
+		margin-right: 19em;
+		padding: 0 2em 1em 1em;
+		font-size: .95em;
+		
+		p:first-child {
+			margin-top: 0;
+		}		
+		img {
+			max-width: 100%;
+		}
+	}
+	.m-accordion {
+		margin: 0 18.1em 0 -2em;
+	}
+	
+	/* Medium screens */
+	@media (max-width: 45em) {
+		.l-container {
+			padding: 1em .5em 0;
+		}
+		.container-inner {
+			background-image: none;
+			padding-bottom: 1em;			
+		}
+		.page-content {
+			margin-right: 0;			
+		}
+		.l-sidebar {
+			display: none;
+		}
+		.m-accordion {
+			margin: 0 -2em;
+		}
+	}
+	
+} /* .l-page */
+
+/* Arabic version */
+.rtl .l-page {
+	.page-content {
+		text-align: right;
+		font-size: 1em;
+
+		ul {
+			padding: 0 40px 0 0;
+		}
+	}
+}

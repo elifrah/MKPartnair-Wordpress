@@ -1,0 +1,78 @@
+/* ==|=======================================================================
+   Module/Clients logos
+   ========================================================================== */
+
+.m-clients {
+	background: #fff;
+	@include box-shadow(0, 1px, 4px, #d7d7d7);
+	padding: 1em 0;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	
+	.title {
+		font: 300 1.125em/1.5 $oswald; /* 18/16 */
+		@include d-inline-block();		
+		text-transform: uppercase;
+		vertical-align: middle;
+		*vertical-align: 10px; /* IE7 Hack */
+		margin: 0;
+
+		a {
+			color: #767676;
+		}
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		@include d-inline-block();		
+	}	
+	li {
+		@include d-inline-block();
+		margin: 0 .4em;
+		vertical-align: middle;
+	}
+	a, img {
+		height: 30px;
+		display: block;
+	}
+}
+
+.m-clients-big {
+	padding: 5em 0;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		@include d-inline-block();		
+	}
+	li {
+		@include d-inline-block();
+		margin: 0 1em 1em;
+		vertical-align: middle;
+	}
+	a, img {
+		width: 160px;
+	}
+	img {
+		@include border-radius(2px);
+		@include box-shadow(0, 1px, 2px, rgba(#000, .1));
+		padding: 1em;
+		background-color: #fff;
+	}
+}
+
+
+/* ==|=======================================================================
+   Responsive/Small Screens
+   ========================================================================== */
+   
+@media (max-width: 47em) {
+	.m-clients {
+		.title {
+			margin-bottom: 1em;
+		}
+	}
+}

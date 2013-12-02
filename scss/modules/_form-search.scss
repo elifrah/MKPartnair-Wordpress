@@ -1,0 +1,20 @@
+/* ==|=======================================================================
+   Module/Form search
+   ========================================================================== */
+   
+.m-form-search {
+	input.text {
+		@include border-radius(2px 0 0 2px);
+		border-right: none;
+		height: 1.2em;
+	}
+	input.m-btn {
+		@include border-radius(0 2px 2px 0);
+		vertical-align: top;
+		padding: .36em .6em;
+		font-size: 1em;
+		height: 2.05em;
+		position: relative;
+		*top: 2px; /* IE7 Hack */
+	}
+} /* .m-form-search */

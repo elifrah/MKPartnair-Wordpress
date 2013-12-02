@@ -1,0 +1,143 @@
+/* ==|=======================================================================
+   Layout/Footer
+   ========================================================================== */
+
+.l-footer {
+	background-color: #fff;
+	text-align: left;
+	padding: 1.5em 0;
+	border-bottom: 3px solid $color2;
+	@include box-shadow(0, -1px, 3px, rgba(#000, .12));
+	@extend .clearfix;
+	
+	.col {
+		position: relative;
+	}
+	.title {
+		color: #2a2a2a;
+		font: 300 1.0625em/1.5 $oswald; /* 17/16 */
+		text-transform: uppercase;
+		padding-bottom: .5em;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	a, p {
+		color: #6b6b6b; 
+		font-size: .875em; /* 14/16 */		
+		margin-top: 0;		
+	}
+	a {
+		padding: .1em 0;
+		display: block;
+		vertical-align: top;
+		
+		&:hover {
+			color: #000;
+		}		
+	}
+	.phone {
+		font-size: 1.5625em; /* 25/16 */
+		color: #6b6b6b;
+	}
+	.icon {
+		vertical-align: -2px;
+		*margin-right: 3px; /* IE7 Hack */
+	}
+	hr {
+		width: 70%;
+	}
+	.lang {
+		clear: both;
+		display: none;
+		text-align: center;
+		padding-top: 1em;
+		font-size: 1.5em;
+	}
+	.bottom {
+		padding: 4em 0 1em;
+		clear: both;
+	}
+	.bottom-bank {
+		float: left;
+		background: $sprite-default -726px -14px;
+		width: 325px;
+		height: 25px;
+	}
+	.bottom-logo {
+		margin: 0 auto;
+		background: $sprite-default -735px -109px;
+		width: 187px;
+		height: 22px;
+		display: block;
+		text-indent: -9999px;
+	}
+	.bottom-copyright {
+		float: right;
+		margin: 0;
+	}
+
+	/* Responsive/Small Screens */  
+	@media (max-width: 56em) {
+		.bottom {
+			padding-top: 2em;
+		}				
+		.bottom-bank {
+			float: none;
+			display: block;
+			margin: auto;
+			background: $sprite-default -363px -8px;
+			background-size: 670px 71px;
+			width: 161px;
+			height: 17px;
+		}
+		.bottom-logo {
+			margin-top: 1em;
+		}
+		.bottom-copyright {
+			float: none;
+			display: block;
+			text-align: center;
+			margin-top: 1em;
+		}
+		.m-form-search {
+			.text {
+				width: 100%;
+				box-sizing: border-box;
+				height: 36px;
+			}
+			.m-btn {
+				position: absolute;
+				right: 0;
+				height: 36px;
+			}
+		}
+		.last {
+			li {
+				@include d-inline-block;
+				width: 49%;
+			}
+			a {
+				font-size: 1.25em; /* 20/16 */
+			}
+		}
+		.icon {
+			vertical-align: -1px;
+		}
+		.mail {
+			display: none;
+		}
+		.phone {
+			font-size: 1em;
+		}
+		.lang {
+			display: block;
+		}
+	}
+
+}
+
+
+

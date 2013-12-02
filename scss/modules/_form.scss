@@ -1,0 +1,85 @@
+/* ==|=======================================================================
+   Non Modular/Form Flight
+   ========================================================================== */
+
+.m-form {
+	margin: 0 auto 4em;
+	
+	.l-container {
+		margin-bottom: 1em;
+	}
+	[class^="row-flight-step"],
+	[class*="row-flight-step"] {
+		display: none;	
+	}
+	.row-form {
+		margin-bottom: 1.3125em; /* 21/16*/
+		@include clearfix();
+	}
+	.row-form-last {
+		@extend .row-flight;
+	}
+	.schedule {
+		float: right;
+		width: 5.5em;
+	}	
+	.date {
+		margin-right: 6em;
+		position: relative;
+	}
+	.i-cal {
+		position: absolute;
+		left: 5em;
+	}
+	input[type="text"], textarea {
+		width: 100%;
+		@include box-sizing(border-box);
+		*width: 90%; /* IE7 Hack */
+	}
+	.btn-new-destination {
+		@include d-inline-block();
+		margin-top: .5em;
+		font-size: .875em; /* 14/16 */
+	}
+	.btn-wrap {
+		text-align: center;
+		margin-top: 2em;
+	}
+	.m-btn {
+		padding-left: 5em;
+		padding-right: 5em;
+	}
+	textarea {
+		height: 7em;
+		line-height: 1.5;
+	}
+	textarea.big {
+		height: 19em;		
+	}
+	.radio-wrap {
+		@include d-inline-block();
+	}
+	.disabled {
+		opacity: .4;
+		@include unselectable();
+
+		&:hover {
+			border-color: #cacaca;
+		}
+	}
+
+	/* Small screens */
+	@media (max-width: 30em) {
+		.row-form { 
+			margin-bottom: 0;
+
+			.col {
+				margin-bottom: 1em;
+			}
+		}
+		.radio-wrap {
+			display: block;
+			margin-bottom: .5em;
+		}
+	}
+}

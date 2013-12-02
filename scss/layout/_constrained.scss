@@ -1,0 +1,39 @@
+/* ==|=======================================================================
+   Layout/Constrained
+   ========================================================================== */
+
+.l-constrained {
+	max-width: $wrapper-width;
+	padding: 0 13px;
+	margin: 0 auto;
+}
+.l-constrained-57 {
+	@extend .l-constrained;
+	max-width: 57em;
+}
+.l-constrained-53 {
+	@extend .l-constrained;
+	max-width: 53em;
+}
+.l-constrained-41 {
+	@extend .l-constrained;
+	max-width: 41em;
+}
+.l-constrained-46 {
+	@extend .l-constrained;
+	max-width: 46em;
+}
+.l-constrained-lesspadding {
+	@extend .l-constrained;
+}
+
+
+/* ==|=======================================================================
+   Responsive/Small Screens
+   ========================================================================== */
+   
+@media (max-width: 47em) {
+	.l-constrained-lesspadding {
+		padding: 0 .6em;
+	}
+}

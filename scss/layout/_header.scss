@@ -1,0 +1,126 @@
+/* ==|=======================================================================
+   Layout/Header
+   ========================================================================== */
+
+.l-header {
+	text-align: center;	
+	padding: 2.9em 0 .1em;
+	background-color: #fff;	
+	z-index: 10;
+	position: relative;
+	
+	.l-constrained {
+		position: relative;
+		&:after {
+			background-image: url('../img/sprite.png');
+			width: 100%;
+			height: 5px;
+			position: absolute;
+			bottom: -7px;
+			left: 0;
+			content: "";
+			z-index: 3;
+		}
+	}
+	.logo {		
+		display: block;
+		margin: 0 auto;
+		background: $sprite-default -734px -65px;
+		width: 293px;
+		height: 34px;
+		text-indent: -9999px;
+	}
+	.lang {
+		position: absolute;
+		top: -1.8em;
+		right: 1em;
+	}	
+	a.phone {
+		font-family: $font2;
+		letter-spacing: .1em;
+		font-weight: 300;
+		font-size: .875em; /* 14/16 */
+		position: absolute;
+		top: 0;
+		right: 1em;
+		color: #969696;
+		
+		.icon {
+			vertical-align: -2px;
+		}
+	}
+}
+
+
+/* ==|=======================================================================
+   Responsive/Small Screens
+   ========================================================================== */
+   
+@media (max-width: 47em) {
+	.l-header {
+		height: auto;
+		padding-top: 1em !important;
+		margin-bottom: .6em;
+		@include box-shadow(0, 2px, 3px, rgba(#000, .1));
+		
+		.l-constrained {
+			height: 3em;
+			
+			&:after {
+				background-image: none;
+			}
+		}		
+		.logo {
+			position: absolute;
+			left: 50%;
+			margin-left: -83px;
+			margin-top: .3em;
+			background: $sprite-default-retina -206px -18px;
+			background-size: 378px 40px;
+			width: 166px;
+			height: 20px;
+		}
+		.lang {
+			display: none;
+		}
+		.phone {
+			@include gradient-linear(#f9f9f9, #ededed);
+			border: 1px solid #d5d5d5;
+			@include border-radius(2px);
+			padding: .3em .6em .1em .65em;
+			right: .5em;
+			
+			.icon {
+				background-position: -402px -72px;
+				width: 19px;
+				height: 24px;
+			}
+			span {
+				display: none;
+			}
+		}
+	}
+}
+
+
+/* ==|=======================================================================
+   Responsive/Very Small Screens
+   ========================================================================== */
+@media (max-width: 15em) {
+	.l-header {
+		.l-constrained {
+			height: 5em;
+		}
+		.logo {
+			margin-top: -.3em;
+		}
+		.phone, .l-primary-nav { 
+			margin-top: 2em;
+		}
+	}
+}
+
+
+
+
+

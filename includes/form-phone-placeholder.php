@@ -1,0 +1,1 @@
+<?php _e("<!--:en-->specify the country code (eg +33 for France)<!--:--><!--:fr-->Précisez l'indicatif (ex: +33 pour la France)<!--:--><!--:ar-->specify the country code (eg +33 for France)<!--:-->"); ?>

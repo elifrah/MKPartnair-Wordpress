@@ -1,0 +1,89 @@
+/* ==|=======================================================================
+   Module/article
+   ========================================================================== */
+
+.article {
+	background: #fff;
+	@include border-radius(2px);
+	@include box-shadow-ie(0,1px,3px,rgba(#000, .2), #eee);
+	@include box-sizing(border-box);
+	
+	.title {
+		text-align: center;
+		font: 300 1.25em/1.5 $font2; /* 20/16 */			
+		text-transform: uppercase;
+		border-bottom: 1px solid #f3f3f3;	
+		margin: 0;		
+		
+		a {
+			color: $color2;
+			display: block;
+			padding: .5em;
+		}
+	}		
+	img {
+		width: 100%;
+		height: auto;
+	}
+	p {
+		padding: 0 .7em;
+		color: #636363;
+		font-size: .875em; /* 14/16 */
+		height: 4.5em;
+		*height: 6em; /* IE7 Hack */
+	}	
+	.more {
+		display: block;
+		background-color: #f6f6f6;
+		padding: .3em 0;
+		text-align: center;
+		color: #000;
+		font-weight: normal;
+		border-top: solid 1px #e6e6e6;
+		
+		&:hover {
+			background-color: #eee;
+		}
+	}
+}
+
+
+/* ==|=======================================================================
+   Responsive/Medium Screens
+   ========================================================================== */
+
+/* 1024x768 */
+@media (max-width: 67em) {
+	.article {
+		p {
+			height: 6em;
+		}
+	}
+}
+/* iPad (768 x 1024) */
+@media (max-width: 56em) {
+	.article {
+		p {
+			height: 3.5em;
+		}
+	}
+}
+
+
+/* ==|=======================================================================
+   Responsive/Small Screens
+   ========================================================================== */
+   
+@media (max-width: 47em) {
+	.article {
+		margin-bottom: 1em;
+		
+		.title a {
+			font-size: .8em;	
+		}	
+		p {
+			height: auto;
+		}	
+	}
+}
+

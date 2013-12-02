@@ -1,0 +1,123 @@
+/* ==|=======================================================================
+   Layout/Main
+   ========================================================================== */
+
+.l-main {
+	text-align: left;
+	
+	.main-head {
+		margin: 3.75em 0 2.5em;
+		
+		p {
+			margin-top: 0;
+		}
+	}
+	.title-section {
+		margin-bottom: 0;
+		font: 300 2.4375em/1.5 $oswald; /* 39/16 */
+		text-transform: uppercase;
+		color: #000;
+	}
+	.title-img {
+		position: relative;	
+		max-height: 15em;
+		*height: 15em; /* IE7hack */
+		overflow: hidden;	
+		@include border-radius(0 0 2px 2px);	
+		@include box-shadow-ie(0, 1px, 3px, rgba(#000, .12), #ddd);
+		
+		img {
+			width: 100%;
+			height: auto;
+		}	
+	}
+	.title-img-inner {
+		position: absolute;
+		bottom: .5em;
+		left: 1.5em;
+		font-size: 2em;
+		font-family: $oswald;
+		text-transform: uppercase;
+		color: #000;
+		margin: 0;
+		z-index: 1;
+		font-weight: 300;		
+	}
+	.title-white-gradient {
+		background: url("../img/title-white-gradient.png") no-repeat left bottom;
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: .6;
+	}
+	.main-content {
+		font-size: .95em;
+	}
+	
+	/* Small screens */
+	@media (max-width: 30em) {
+		.main-head {
+			margin-top: 1.5em;
+		}
+		.title-img {
+			background-color: #fff;
+			height: auto;
+		}
+		.title-img-inner {
+			position: static;
+			text-align: center;
+			font-size: 1.5em;
+			padding: .3em 0 .5em;
+		}
+		.title-white-gradient {
+			display: none;
+		}
+	}
+}
+
+/* Arabe version */
+.rtl .l-main {
+	.title-section, 
+	.main-head { 
+		text-align: right;
+
+		p {
+			text-align: right !important;		
+		}
+	}
+	.title-img-inner {
+		right: 1.5em;
+		left: auto;
+	}
+	.title-white-gradient {
+		background-image: url("../img/title-white-gradient-rtl.png");
+		right: -369px;
+		left: auto;
+		opacity: .7;
+	}
+	.main-content {
+		font-size: 1em;
+	}
+}
+
+/* On subpages */
+.page-child {
+	.title-img {
+		margin-top: 2.3em;
+	}
+	@media (max-width: 47em) { 
+		margin-top: 1 em;	
+	}
+}
+.parent-pageid-78 {
+	.title-img {
+		margin-top: 0;
+	}
+}
+
+
+
+
+

@@ -1,0 +1,17 @@
+/* ==|=======================================================================
+   Layout/Sidebar
+   ========================================================================== */
+
+.l-sidebar {
+	width: 14.82em;;
+	float: right;
+	position: relative;
+	padding: 0 .7em 0 2.21em;
+	
+	.m-book {
+		margin-bottom: 2em;
+	}
+	.article .more {
+		margin-top: -.4em;
+	}
+} /* .l-sidebar */
